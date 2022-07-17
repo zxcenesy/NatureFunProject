@@ -18,7 +18,7 @@ $(document).ready(function () {
             breakpoint: 992,
             settings: "unslick"
          }, {
-            breakpoint: 750,
+            breakpoint: 800,
             settings: {
                slidesToShow: 2,
                slidesToScroll: 1
@@ -55,6 +55,13 @@ $(document).ready(function () {
       $(this).closest('.portfolio__gallery').find('.big-portfolio__gallery-item img').attr('src', src);
    });
 
+
+   $('.packages__column-gallery').on('click', '.column-gallery-item-pic-min', function (event) {
+      let src = $(this).attr('src');
+      $(this).closest('.packages__column-gallery').find('.big-column-gallery-item img').attr('src', src);
+   });
+
+
    document.querySelectorAll('a.header__link').forEach(link => {
       link.addEventListener('click', function (e) {
          e.preventDefault()
@@ -74,5 +81,6 @@ $(document).ready(function () {
 
       });
    });
+
 
 });
